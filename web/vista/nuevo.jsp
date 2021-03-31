@@ -19,7 +19,7 @@
             Libro item = (Libro) request.getAttribute("item");
         %>
         <h1>Editar Libros</h1>
-        <form action="Principal?op=guardar" method="post">
+        <form action="Principal" method="post">
             ID: <input type="text" name="id" value="<%= item.getId() %>" size="2" pattern="[1-9]{1}[0-9]*"/>
             <input type="hidden" name="tipo" value="-1" required/>
             <br>
