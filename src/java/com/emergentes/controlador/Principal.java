@@ -80,7 +80,9 @@ public class Principal extends HttpServlet {
         Libro obj = new Libro();
         
         gestor.setCorrelativo(gestor.getCorrelativo()+1);
-        obj.setId(gestor.getCorrelativo());
+        
+        obj.setId(Integer.parseInt(request.getParameter("id")));
+        
         obj.setAutor(request.getParameter("autor"));
         obj.setTitulo(request.getParameter("titulo"));
         obj.setEstado(Integer.parseInt(request.getParameter("estado")));
@@ -88,6 +90,7 @@ public class Principal extends HttpServlet {
         String tipo = request.getParameter("tipo");
         
         if (tipo.equals("-1")) {
+            obj.setId(gestor.getCorrelativo());
             gestor.insertar(obj);
         } else {
             gestor.modificar(obj.getId(), obj);
