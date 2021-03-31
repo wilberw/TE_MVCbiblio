@@ -88,7 +88,7 @@ public class Principal extends HttpServlet {
         obj.setEstado(Integer.parseInt(request.getParameter("estado")));
         
         String tipo = request.getParameter("tipo");
-        System.out.println(tipo);
+        
         
         if (tipo.equals("-1")) {
             obj.setId(gestor.getCorrelativo());
