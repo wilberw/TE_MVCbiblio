@@ -18,7 +18,7 @@
             Libro item = (Libro) request.getAttribute("item");
         %>
         <h1>Editar Libro</h1>
-    <from action="Principal?op=guardar" method="post">
+    <from action="Principal" method="post">
         ID: <input type="text" name="id" value="<%= item.getId() %>" size="2" pattern="[1-9]{1}[0-9]*"/>
             <input type="hidden" name="tipo" value="<%= item.getId() %>" required/>
             <br>
